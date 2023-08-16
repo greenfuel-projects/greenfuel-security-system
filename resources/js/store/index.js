@@ -6,10 +6,27 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-    state: {},
-    getters: {},
-    mutations: {},
-    actions: {},
+    state: {
+        user: [],
+    },
+    getters: {
+        userGet(state) {
+            return state.user;
+        },
+    },
+    mutations: {
+        userMut(state, token) {
+            state.user = [];
+            if (token !== "logout") {
+                state.user.push(token);
+            }
+        },
+    },
+    actions: {
+        userAct(context, token) {
+            context.commit("userMut", token);
+        },
+    },
     modules: {},
 });
 

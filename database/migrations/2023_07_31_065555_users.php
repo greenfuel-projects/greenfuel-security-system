@@ -18,12 +18,13 @@ class Users extends Migration
             $table->string('f_name', 30);
             $table->string('l_name', 30);
             $table->string('nat_id', 13)->nullable();
-            $table->string('gender', 6);
+            $table->string('gender', 6)->default('Male');
             $table->string('phone', 12)->nullable();
             $table->string('address', 100)->nullable();
             $table->string('company_no', 10)->nullable();
-            $table->integer('department_id');
+            $table->integer('department_id')->nullable();
             $table->boolean('department_head')->default(0);
+            $table->boolean('status')->default(1);
             $table->integer('user_type_id');
             $table->string('username', 20)->nullable();
             $table->string('password', 255)->nullable();

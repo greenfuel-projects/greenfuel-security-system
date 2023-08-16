@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AccessGroups extends Migration
+class AccessRights extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class AccessGroups extends Migration
      */
     public function up()
     {
-        Schema::create('access_groups', function (Blueprint $table) {
-            $table->integer('access_group_id')->autoIncrement();
-            $table->string('access_group', 20);
+        Schema::create('access_rights', function (Blueprint $table) {
+            $table->integer('access_right_id')->autoIncrement();
+            $table->string('access_right', 30);
         });
     }
 

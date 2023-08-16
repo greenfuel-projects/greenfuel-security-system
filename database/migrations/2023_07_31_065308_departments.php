@@ -15,7 +15,7 @@ class Departments extends Migration
     {
         Schema::create('departments', function (Blueprint $table) {
             $table->integer('department_id')->autoIncrement();
-            $table->string('department', 15);
+            $table->string('department', 20);
         });
     }
 

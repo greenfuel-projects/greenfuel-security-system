@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AccessGroup extends Model
+class AccessPermission extends Model
 {
+    
     use HasFactory;
-    protected $table = 'access_groups';
+    protected $table = 'access_permissions';
 }
